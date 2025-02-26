@@ -1,1 +1,39 @@
-#
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapas Superpuestos con Geoman y Sync</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-geoman-free@2.13.0/dist/leaflet-geoman.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-sidebar-v2/css/leaflet-sidebar.css">
+</head>
+<body>
+    <div id="sidebar" class="leaflet-sidebar collapsed">
+        <div class="leaflet-sidebar-tabs">
+            <ul role="tablist">
+                <li><a href="#home" role="tab"><i class="fa fa-bars"></i></a></li>
+                <li><a href="#settings" role="tab"><i class="fa fa-cog"></i></a></li>
+            </ul>
+        </div>
+        <div class="leaflet-sidebar-content">
+            <div class="leaflet-sidebar-pane" id="home">
+                <h1 class="leaflet-sidebar-header">Opciones<span class="leaflet-sidebar-close">×</span></h1>
+                <p>Aquí puedes agregar controles adicionales o información del mapa.</p>
+            </div>
+            <div class="leaflet-sidebar-pane" id="settings">
+                <h1 class="leaflet-sidebar-header">Configuración<span class="leaflet-sidebar-close">×</span></h1>
+                <p>Configura las capas o ajusta la visualización.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="map-container">
+        <div id="map1" class="map"></div>
+        <div id="map2" class="map overlay"></div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-geoman-free@2.13.0/dist/leaflet-geoman.min.js"></script>
+    <script src="https://unpkg.com/leaflet.sync@0.1.1/L.Map.Sync.js"></script>
+    <script src="https://unpkg.com/leaflet-sidebar-v2/js/leaflet-sidebar.js"></script
